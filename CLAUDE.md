@@ -50,3 +50,4 @@
 
 - `.claude/settings.json`: 秘密情報ファイルの読み取り禁止と、外部送信系操作の確認必須化を定義（チーム共有）。
 - `.claude/settings.local.json`: 個人用の上書き設定（git 管理外）。
+- `.github/workflows/secret-scan.yml`: gitleaks による認証情報の混入検査。失敗した場合は該当コミットから秘密情報を除去し、漏れた認証情報は無効化（ローテーション）する。
