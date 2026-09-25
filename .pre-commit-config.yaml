@@ -1,0 +1,7 @@
+# ローカル PC でコミット前に認証情報の混入を検出する（任意）。
+# 使い方: pip install pre-commit && pre-commit install
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
